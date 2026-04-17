@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management Portal</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+        .portal-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .dev-img-container::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px dashed #3b82f6;
+            border-radius: 1.5rem;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i class="fas fa-university text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800 leading-none">UNIVERSITY</h1>
+                    <p class="text-xs text-gray-500 tracking-widest uppercase font-medium">Management System</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-blue-600">Home</a>
+                <a href="#about" class="hover:text-blue-600">About System</a>
+                <a href="#developer" class="hover:text-blue-600">Developer</a>
+                <a href="#contact" class="hover:text-blue-600">Contact Support</a>
+            </nav>
+            <button class="md:hidden text-gray-600 text-xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+        
+        <!-- Welcome Text -->
+        <section class="text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2">Welcome to Digital Portal</h2>
+            <p class="text-gray-600">Unified gateway for students, faculty, and administrative staff.</p>
+        </section>
+
+        <!-- Developer Section (New) -->
+        <section id="developer" class="max-w-4xl mx-auto py-12">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-12">
+                <div class="relative dev-img-container w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                    <img src="aj.jpeg" 
+                         alt="Developer Ajit Kumar" 
+                         class="w-full h-full object-cover rounded-3xl relative z-10 shadow-lg border-4 border-white">
+                </div>
+                <div class="text-center md:text-left">
+                    <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Lead Developer</span>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">Ajit Kumar</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        "Creating innovative digital solutions to transform campus management. This portal is built with a focus on user experience and seamless administrative integration."
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">About the System</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Our University Management System (UMS) is a comprehensive digital platform designed to streamline academic and administrative processes. It serves as a central hub for managing student records, faculty resources, and campus operations efficiently.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i> Real-time academic tracking and results.
+                        </li>
+                        <li class="flex items-center text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i> Integrated Finance and Account management.
+                        </li>
+                        <li class="flex items-center text-sm text-gray-700">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i> Automated Library and Hostel operations.
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-2xl flex justify-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-[120px] opacity-20"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Grid -->
+        <section id="login-portals">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-gray-800">Login Portals</h3>
+                <p class="text-gray-500">Select your department to access personalized features.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Student Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Student Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Access your attendance, exam schedules, and results here.</p>
+                    <a href="./students/login.php" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+
+                <!-- Faculty Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Faculty Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Manage LMS, student attendance, and course marks entry.</p>
+                    <a href="./facultys/faculty_login.php" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+
+                <!-- Admin Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-700 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Admin Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Full system configuration and user management controls.</p>
+                    <a href="./admin/login.php" class="w-full py-2.5 bg-gray-800 hover:bg-gray-900 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+
+                <!-- Hostel Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Hostel Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Manage room allotment, mess bills, and hostel facilities.</p>
+                    <a href="./hostels/hostel_login.php" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+
+                <!-- Account/Finance Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Account Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Check fee collection, payroll, and university accounts.</p>
+                    <a href="./accounts/account_login.php" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+
+                <!-- Library Login -->
+                <div class="bg-white p-8 rounded-2xl portal-card border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Library Login</h3>
+                    <p class="text-sm text-gray-500 mb-6">Search books, check availability, and manage renewals.</p>
+                    <a href="./library_mg/library_login.php" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition text-center text-sm">Go to Login</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-slate-800 p-10 rounded-3xl text-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Contact Support</h3>
+                    <p class="text-slate-300 mb-8">Need help with your login or technical issues? Our support team is available 24/7 to assist you.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-400"></i>
+                            </div>
+                            <span class="text-sm">webdev960805@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone-alt text-blue-400"></i>
+                            </div>
+                            <span class="text-sm"></span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-blue-400">9334649467</i>
+                            </div>
+                            <span class="text-sm">Bihar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-700 p-8 rounded-2xl">
+                    <h4 class="font-semibold mb-4">Office Hours</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between"><span>Mon - Fri:</span> <span>09:00 AM - 06:00 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span>10:00 AM - 02:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-red-400 font-bold">Closed</span></li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-slate-600">
+                        <p class="text-xs text-slate-400">For urgent queries, please raise an emergency ticket via the Admin portal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Feedback Form Section -->
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 max-w-2xl mx-auto">
+    
+    <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-gray-800">Share Your Feedback</h3>
+        <p class="text-gray-500 text-sm mt-1">
+            Help us improve the portal by sharing your valuable suggestions.
+        </p>
+    </div>
+
+    <form id="feedbackForm" class="space-y-4">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" name="name" required
+                    placeholder="Enter your full name"
+                    class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email ID</label>
+                <input type="email" name="email" required
+                    placeholder="example@university.edu"
+                    class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Your Suggestions</label>
+            <textarea name="message" rows="3" required
+                placeholder="Write your feedback here..."
+                class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <button type="submit"
+            class="w-full py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-xl font-bold flex items-center justify-center space-x-2">
+            <span>Submit Feedback</span>
+        </button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="successMsg"
+        class="hidden mt-4 p-3 bg-green-50 text-green-700 text-sm text-center rounded-xl border border-green-100">
+        ✅ Thank you! Your feedback has been submitted successfully.
+    </div>
+</div>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> University Management System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set the live year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch("save_feedback.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            document.getElementById("successMsg").classList.remove("hidden");
+            document.getElementById("feedbackForm").reset();
+        } else {
+            alert("Error submitting feedback");
+        }
+    });
+});
+
+
+    </script>
+
+</body>
+</html>
